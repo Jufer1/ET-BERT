@@ -1,0 +1,1 @@
+finetuned_model_v1.bin 微调数据为 D:\desktop\workcache\aiLabSpace\ET-BERT\datasets\fine-tuning_dataset\cstnet-tls1.3_packet\packet
