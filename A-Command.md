@@ -23,6 +23,16 @@ python inference/run_classifier_infer.py --load_model_path models/finetuned_mode
 3. create pratrain data command
 ```
 python preprocess.py --corpus_path corpora/encrypted_tls13_burst_yxy_8from9.txt --vocab_path models/encryptd_vocab_tls13_yxy_8from9.txt --dataset_path dataset_tls13_yxy_8from9.pt --processes_num 8 --target bert
+
+# bertv1  local
+python .\preprocess.py --corpus_path .\corpora\fromTls13v1\encrypted_tls13_burst_yxy_v1_x6.txt --vocab_path .\models\origin-model\encryptd_vocab.txt --dataset_path .\vocab_process\dataset_v1_x6.pt --processes_num 5 --target bertv1 --seq_length 192
+
+# 8from9  remote serve
+python preprocess.py --corpus_path ../et-bert-dataset/encrypted_tls13_burst_yxy_8from9.txt --vocab_path models/origin-model/encryptd_vocab.txt --dataset_path dataset_8from9.pt --processes_num 5 --target bert
+
+# v1_x3  remote serve
+python preprocess.py --corpus_path ../et-bert-dataset/fromTls13v1/encrypted_tls13_burst_yxy_v1_x3.txt --vocab_path models/origin-model/encryptd_vocab.txt --dataset_path dataset_v1_x3.pt --processes_num 5 --target bertv1 --seq_length 192
+
 ```
 
 

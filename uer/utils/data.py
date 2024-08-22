@@ -474,11 +474,12 @@ class BertV1Dataset(Dataset):
                         docs_buffer = []
                         docs_timestamp_buffer = []
                     continue
-                try:
-                    float(line.strip("\n"))
-                    is_number = True
-                except ValueError:
-                    is_number = False
+                # try:
+                #     float(line.strip("\n"))
+                #     is_number = True
+                # except ValueError:
+                #     is_number = False
+                is_number = line.strip("\n").replace('.', '', 1).isdigit()
                 if is_number:
                     document_timestamp.append(float(line.strip("\n")))
                 else:
